@@ -3,7 +3,6 @@
 #include <locale.h> 
 #define _USE_MATH_DEFINES 
 #include <math.h>
-#define N 5
  
 void main() 
 { 
@@ -11,16 +10,20 @@ void main()
 	 
 	puts("Вариант 23");
 
-	int A[N], temp, s = 0, p = 0;
-	printf("Введите 5 целых чисел");
-	for (int i = 0; i < N; i++)
+	int n;
+	printf("Введите кол-во чисел массива:");
+	scanf("%d", &n);
+	
+	int A[n], temp, s = 0, p = 0;
+	printf("Введите n целых чисел");
+	for (int i = 0; i < n; i++)
 	{ 
 		printf("\na=[%d]", i + 1); 
 		scanf("%f", &temp); 
 		A[i] = temp; 
 	} 
 	 
-	for (int i = 0; i < N; i++)
+	for (int i = 0; i < n; i++)
 	{ 
 		if (A[i] / 2 == 0)  
 		{ 
